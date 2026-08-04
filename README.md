@@ -1,12 +1,19 @@
 # 2D Platformer Starter Kit
 
+Natdanai Somsuay AI sec.2
+
 This starter kit provides all the essential mechanics needed to build a complete 2D platformer game in Godot 4.7. It is designed as a hands-on learning resource for students taking the **Computer Game Development** course at the **College of Computing, Khon Kaen University**.
 
 ## Preview
 
-<img src="docs/qrcode.png" style="width:300px;" />
+<img src="GameLab4/t/demo1.PNG" style="width:300px;" />
+<img src="GameLab4/t/demo2.PNG" style="width:300px;" />
+<img src="GameLab4/t/demo3.PNG" style="width:300px;" />
+<img src="GameLab4/t/demo4.PNG" style="width:300px;" />
+<img src="GameLab4/t/demo5.PNG" style="width:300px;" />
 
-- [Game Preview](https://computingkku.github.io/2D-Platformer-Starter-Kit/)
+
+[Game Preview](2DPlatformerStarter.html) 
 
 
 ## Features

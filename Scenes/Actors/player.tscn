@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://ba2umthd5ts2v" path="res://Scenes/Actors/player.gd" id="1_mqoqv"]
 [ext_resource type="PackedScene" uid="uid://c5y568p25r7rl" path="res://Scenes/Prefabs/bullet.tscn" id="2_4fuvf"]
 [ext_resource type="Texture2D" uid="uid://dxp77wq60c2rr" path="res://Assets/Textures/CloudTexture.png" id="3_6q7nd"]
-[ext_resource type="PackedScene" uid="uid://bvoon20abmdym" path="res://Scenes/Sprites/student.tscn" id="4_pdd2n"]
+[ext_resource type="PackedScene" uid="uid://c8pir4te0rig1" path="res://Scenes/Sprites/pirate.tscn" id="4_pdd2n"]
 [ext_resource type="Texture2D" uid="uid://dia1dp34sme5l" path="res://Assets/Spritesheet/light_w.png" id="4_wn7ci"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n4sts"]
@@ -26,6 +26,7 @@ rotation = 0.00042652956
 collision_layer = 2
 script = ExtResource("1_mqoqv")
 bullet_scene = ExtResource("2_4fuvf")
+double_jump = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1840880435]
 position = Vector2(2.08165e-12, -33)
@@ -84,8 +85,8 @@ position = Vector2(-0.9982939, -40.999577)
 scale = Vector2(1.0000001, 1.0000001)
 texture = ExtResource("4_wn7ci")
 
-[node name="student" parent="." unique_id=1717188345 instance=ExtResource("4_pdd2n")]
-position = Vector2(-0.9982939, 4.0004263)
+[node name="pirate" parent="." unique_id=1717188345 instance=ExtResource("4_pdd2n")]
+position = Vector2(6, 2)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1467812523]
 limit_smoothed = true

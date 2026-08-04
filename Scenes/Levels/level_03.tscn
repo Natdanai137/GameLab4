@@ -1,12 +1,112 @@
-[gd_scene format=3 uid="uid://towe6jtciome"]
+[gd_scene load_steps=99 format=3 uid="uid://towe6jtciome"]
 
-[ext_resource type="PackedScene" uid="uid://bjntpxb1c8jxn" path="res://Scenes/Levels/base_level.tscn" id="1_8r7r2"]
-[ext_resource type="PackedScene" uid="uid://b46lxwc5r3dy4" path="res://Scenes/Levels/game_win.tscn" id="2_dcfph"]
+[ext_resource type="PackedScene" uid="uid://bjntpxb1c8jxn" path="res://Scenes/Levels/base_level.tscn" id="1_base"]
+[ext_resource type="TileSet" uid="uid://cterrainpirate1" path="res://Scenes/Prefabs/terrain_tile_set.tres" id="2_ts"]
+[ext_resource type="PackedScene" uid="uid://b4t3volfpnly7" path="res://Scenes/Levels/level_04.tscn" id="3_next"]
+[ext_resource type="Texture2D" uid="uid://5kvo4bhht27g" path="res://b/3 background/1.png" id="10_bg1"]
+[ext_resource type="Texture2D" uid="uid://blfvvdrlwxthe" path="res://b/3 background/2.png" id="11_bg2"]
+[ext_resource type="Texture2D" uid="uid://cpdv438qgk1tj" path="res://b/3 background/3.png" id="12_bg3"]
+[ext_resource type="PackedScene" uid="uid://ctrapshur0001" path="res://Scenes/Prefabs/trap_shuriken.tscn" id="13_trK"]
+[ext_resource type="PackedScene" uid="uid://cqbktg5qdkrc7" path="res://Scenes/Prefabs/trap_spear.tscn" id="14_trS"]
+[ext_resource type="PackedScene" uid="uid://ctrappend0001" path="res://Scenes/Prefabs/trap_pendulum.tscn" id="15_trW"]
+[ext_resource type="PackedScene" uid="uid://citemgold0001" path="res://Scenes/Prefabs/item_gold.tscn" id="16_ito"]
+[ext_resource type="PackedScene" uid="uid://citembronze001" path="res://Scenes/Prefabs/item_bronze.tscn" id="17_ith"]
+[ext_resource type="PackedScene" uid="uid://citemsilver001" path="res://Scenes/Prefabs/item_silver.tscn" id="18_itv"]
+[ext_resource type="PackedScene" uid="uid://cmonstersnake1" path="res://Scenes/Actors/monster_snake.tscn" id="19_en"]
+[ext_resource type="PackedScene" uid="uid://cmonsterhyena1" path="res://Scenes/Actors/monster_hyena.tscn" id="20_cr"]
 
-[node name="BaseLevel" unique_id=1997201631 instance=ExtResource("1_8r7r2")]
+[node name="BaseLevel" unique_id=1997201631 instance=ExtResource("1_base")]
 
 [node name="LevelFinishDoor" parent="." index="0" unique_id=1788542095]
-next_scene = ExtResource("2_dcfph")
+position = Vector2(2976, 544)
+next_scene = ExtResource("3_next")
+
+[node name="Background1" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="0" unique_id=1072429833]
+
+[node name="BgFar" type="Sprite2D" parent="Level/Background1" index="0"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("10_bg1")
+
+[node name="Background2" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="1" unique_id=1070008654]
+
+[node name="Bg2" type="Sprite2D" parent="Level/Background2" index="0"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("11_bg2")
+
+[node name="Bg3" type="Sprite2D" parent="Level/Background2" index="1"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("12_bg3")
+
+[node name="Ground" type="TileMapLayer" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="2"]
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAAEAAkAAAAHAAgAAAAtAAoAAAAHAAkAAAAFAAoAAAAHAAkAAAAIAAkAAAAHAAgAAAATAAkAAAAHAAgAAAAeAAkAAAAHAAgAAAAHAAoAAAAHAAkAAAASAAoAAAAHAAkAAAAVAAkAAAAIAAgAAAAvAAkAAAAIAAgAAAAbAAYAAAAGAAgAAAAJAAoAAAAIAAkAAAArAAUAAAAIAAgAAAANAAoAAAAGAAkAAAAmAAkAAAAHAAgAAAAdAAYAAAAHAAgAAAAQAAYAAAAHAAgAAAAnAAoAAAAHAAkAAAAlAAoAAAAGAAkAAAATAAQAAAAHAAgAAAAAAAkAAAAGAAgAAAApAAoAAAAHAAkAAAABAAoAAAAHAAkAAAAaAAkAAAAHAAgAAAAPAAkAAAAHAAgAAAADAAoAAAAHAAkAAAAOAAoAAAAHAAkAAAARAAkAAAAHAAgAAAAcAAkAAAAHAAgAAAAFAAcAAAAGAAgAAAAeAAYAAAAIAAgAAAAgAAkAAAAHAAgAAAArAAkAAAAHAAgAAAAQAAoAAAAHAAkAAAAHAAcAAAAIAAgAAAAUAAoAAAAHAAkAAAAfAAoAAAAHAAkAAAAtAAkAAAAHAAgAAAAFAAkAAAAHAAgAAAApAAUAAAAHAAgAAAAhAAoAAAAIAAkAAAAsAAoAAAAHAAkAAAAHAAkAAAAHAAgAAAASAAkAAAAHAAgAAAAJAAkAAAAIAAgAAAANAAkAAAAGAAgAAAAPAAYAAAAGAAgAAAAnAAkAAAAHAAgAAAAlAAkAAAAGAAgAAAAbAAoAAAAHAAkAAAApAAkAAAAHAAgAAAABAAkAAAAHAAgAAAAZAAoAAAAGAAkAAAASAAQAAAAGAAgAAAAdAAoAAAAHAAkAAAAoAAoAAAAHAAkAAAADAAkAAAAHAAgAAAAOAAkAAAAHAAgAAAAqAAoAAAAHAAkAAAACAAoAAAAHAAkAAAAQAAkAAAAHAAgAAAAuAAoAAAAHAAkAAAAGAAoAAAAHAAkAAAAUAAkAAAAHAAgAAAAfAAkAAAAHAAgAAAAEAAoAAAAHAAkAAAAIAAoAAAAHAAkAAAAsAAkAAAAHAAgAAAATAAoAAAAHAAkAAAAeAAoAAAAHAAkAAAAhAAkAAAAIAAgAAAAoAAUAAAAGAAgAAAAVAAoAAAAIAAkAAAAvAAoAAAAIAAkAAAARAAYAAAAHAAgAAAAcAAYAAAAHAAgAAAAqAAUAAAAHAAgAAAAmAAoAAAAHAAkAAAAUAAQAAAAIAAgAAAAbAAkAAAAHAAgAAAAAAAoAAAAGAAkAAAAZAAkAAAAGAAgAAAAPAAoAAAAHAAkAAAAaAAoAAAAHAAkAAAAdAAkAAAAHAAgAAAAoAAkAAAAHAAgAAAAGAAcAAAAHAAgAAAASAAYAAAAIAAgAAAARAAoAAAAHAAkAAAAcAAoAAAAHAAkAAAAqAAkAAAAHAAgAAAACAAkAAAAHAAgAAAAgAAoAAAAHAAkAAAArAAoAAAAHAAkAAAAuAAkAAAAHAAgAAAAGAAkAAAAHAAgAAAA=")
+tile_set = ExtResource("2_ts")
+
+[node name="Player" parent="." index="2" unique_id=850213228]
+position = Vector2(160, 532)
+
+[node name="Trap1" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="3" instance=ExtResource("14_trS")]
+position = Vector2(352, 536)
+
+[node name="Trap2" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="4" instance=ExtResource("14_trS")]
+position = Vector2(1120, 536)
+
+[node name="Trap3" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="5" instance=ExtResource("14_trS")]
+position = Vector2(1952, 536)
+
+[node name="Trap4" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="6" instance=ExtResource("13_trK")]
+position = Vector2(736, 480)
+
+[node name="Trap5" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="7" instance=ExtResource("13_trK")]
+position = Vector2(2272, 480)
+
+[node name="Trap6" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="8" instance=ExtResource("15_trW")]
+position = Vector2(1312, 192)
+
+[node name="Trap7" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="9" instance=ExtResource("15_trW")]
+position = Vector2(2784, 192)
+
+[node name="Item0" parent="Coins" parent_id_path=PackedInt32Array(1530662565) index="0" instance=ExtResource("16_ito")]
+position = Vector2(416, 352)
+
+[node name="Item1" parent="Coins" parent_id_path=PackedInt32Array(1530662565) index="1" instance=ExtResource("16_ito")]
+position = Vector2(1056, 352)
+
+[node name="Item2" parent="Coins" parent_id_path=PackedInt32Array(1530662565) index="2" instance=ExtResource("16_ito")]
+position = Vector2(1824, 352)
+
+[node name="Item3" parent="Coins" parent_id_path=PackedInt32Array(1530662565) index="3" instance=ExtResource("16_ito")]
+position = Vector2(2656, 288)
+
+[node name="Item4" parent="Coins" parent_id_path=PackedInt32Array(1530662565) index="4" instance=ExtResource("16_ito")]
+position = Vector2(736, 416)
+
+[node name="Item5" parent="Coins" parent_id_path=PackedInt32Array(1530662565) index="5" instance=ExtResource("16_ito")]
+position = Vector2(1504, 416)
+
+[node name="Item6" parent="Coins" parent_id_path=PackedInt32Array(1530662565) index="6" instance=ExtResource("16_ito")]
+position = Vector2(2272, 416)
+
+[node name="Item7" parent="Coins" parent_id_path=PackedInt32Array(1530662565) index="7" instance=ExtResource("18_itv")]
+position = Vector2(1248, 224)
+
+[node name="Item8" parent="Coins" parent_id_path=PackedInt32Array(1530662565) index="8" instance=ExtResource("17_ith")]
+position = Vector2(2720, 288)
+
+[node name="Enemy0" parent="Enemies" parent_id_path=PackedInt32Array(1580630701) index="0" instance=ExtResource("19_en")]
+position = Vector2(480, 564)
+speed = 70.0
+
+[node name="Enemy1" parent="Enemies" parent_id_path=PackedInt32Array(1580630701) index="1" instance=ExtResource("20_cr")]
+position = Vector2(1696, 564)
+speed = 70.0
+
+[node name="Enemy2" parent="Enemies" parent_id_path=PackedInt32Array(1580630701) index="2" instance=ExtResource("19_en")]
+position = Vector2(2848, 564)
+speed = 70.0
 
 [node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="1" unique_id=1103718868]
 text = "Level 3"

@@ -1,15 +1,28 @@
 [gd_scene format=3 uid="uid://b6tvaxw54wsq0"]
 
 [ext_resource type="Script" uid="uid://tkynu7pd01lh" path="res://Scenes/Levels/menu.gd" id="1_hq2ph"]
+[ext_resource type="Texture2D" uid="uid://bygpcgi8vkc41" path="res://b/1 background/1.png" id="2_ciipc"]
+[ext_resource type="Texture2D" uid="uid://1ay25i0wdihg" path="res://Assets/Icons/cpkku_dark.png" id="2_ju4x4"]
+[ext_resource type="Texture2D" uid="uid://buom2tky2bj7o" path="res://b/1 background/2.png" id="6_d1n5x"]
+[ext_resource type="Texture2D" uid="uid://bfr2hvw0hbn4k" path="res://b/2 background/2.png" id="7_je0pq"]
+[ext_resource type="Texture2D" uid="uid://blfvvdrlwxthe" path="res://b/3 background/2.png" id="8_a2wpm"]
+[ext_resource type="Texture2D" uid="uid://ceq4wxnbrh1t7" path="res://2/2-PIRATE.png" id="8_ieqbc"]
+[ext_resource type="Texture2D" uid="uid://bf22cjh6ai2gc" path="res://b/4 background/2.png" id="9_2vb4c"]
 
 [node name="Node2D" type="Node2D" unique_id=827773846]
 script = ExtResource("1_hq2ph")
 
+[node name="1" type="Sprite2D" parent="." unique_id=780766294]
+position = Vector2(578, 324.99997)
+scale = Vector2(2.0034723, 2.0123456)
+texture = ExtResource("2_ciipc")
+
 [node name="UI" type="Control" parent="." unique_id=2061607031]
 layout_mode = 3
 anchors_preset = 0
+offset_top = 1.0
 offset_right = 1153.0
-offset_bottom = 524.0
+offset_bottom = 525.0
 
 [node name="btnStart" type="Button" parent="UI" unique_id=843125025]
 layout_mode = 1
@@ -60,7 +73,46 @@ offset_bottom = 435.0
 grow_horizontal = 2
 text = "Credit"
 
+[node name="Exit" type="Button" parent="UI" unique_id=1940730483]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -77.5
+offset_top = 447.0
+offset_right = 77.5
+offset_bottom = 511.0
+grow_horizontal = 2
+text = "Exit
+"
+
+[node name="CpkkuDark" type="Sprite2D" parent="." unique_id=2140438082]
+position = Vector2(141, 53)
+texture = ExtResource("2_ju4x4")
+
+[node name="2" type="Sprite2D" parent="." unique_id=60775131]
+position = Vector2(965, 169)
+texture = ExtResource("6_d1n5x")
+
+[node name="3" type="Sprite2D" parent="." unique_id=191131201]
+position = Vector2(396, 128)
+texture = ExtResource("7_je0pq")
+
+[node name="4" type="Sprite2D" parent="." unique_id=617948529]
+position = Vector2(912, 433)
+texture = ExtResource("8_a2wpm")
+
+[node name="5" type="Sprite2D" parent="." unique_id=226114231]
+position = Vector2(729, 115)
+texture = ExtResource("9_2vb4c")
+
+[node name="2Pirate" type="Sprite2D" parent="." unique_id=459736430]
+position = Vector2(248.99997, 423.0001)
+scale = Vector2(0.25809523, 0.25809523)
+texture = ExtResource("8_ieqbc")
+
 [connection signal="pressed" from="UI/btnStart" to="." method="_on_btn_start_pressed"]
 [connection signal="pressed" from="UI/btnContinue" to="." method="_on_btn_continue_pressed"]
 [connection signal="pressed" from="UI/btnOption" to="." method="_on_btn_option_pressed"]
 [connection signal="pressed" from="UI/btnCredit" to="." method="_on_btn_credit_pressed"]
+[connection signal="pressed" from="UI/Exit" to="." method="_on_exit_pressed"]

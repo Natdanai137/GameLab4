@@ -28,8 +28,8 @@ var is_attacking = false
 var shoot_cooldown_timer = 0.0
 var can_damage = true
 
-@onready var player_sprite : AnimationPlayer = $student/AnimationPlayer
-@onready var player_node = $student
+@onready var player_sprite : AnimationPlayer = $pirate/AnimationPlayer
+@onready var player_node = $pirate
 @onready var bullet_marker = $BulletMarker
 @onready var particle_trails = $ParticleTrails
 @onready var death_particles = $DeathParticles
@@ -137,6 +137,12 @@ func respawn_tween():
 	tween.tween_property(self, "scale", Vector2.ONE, 0.15) 
 	tween.parallel().tween_property(self, "position", spawn_point, 0.15)
 
+# Temporary speed boost from Silver item
+func apply_speed_boost(amount: float, duration: float) -> void:
+	move_speed += amount
+	await get_tree().create_timer(duration).timeout
+	move_speed -= amount
+
 func jump_tween():
 	var tween = create_tween()
 	tween.tween_property(self, "scale", Vector2(0.7, 1.4), 0.1)
@@ -179,9 +185,8 @@ func shoot():
 	player_sprite.play("Attack")
 	var bullet = bullet_scene.instantiate()
 	bullet.global_position = bullet_marker.global_position
-	var angle = deg_to_rad(randf_range(0, 20))
 	var sign_x = 1.0 if player_node.scale.x > 0 else -1.0
-	var dir = Vector2(cos(angle) * sign_x, -sin(angle))
+	var dir = Vector2(sign_x, 0)
 	get_parent().add_child(bullet)
 	bullet.shoot(dir, 600, bullet_lifetime)
 	shoot_cooldown_timer = shoot_cooldown_time

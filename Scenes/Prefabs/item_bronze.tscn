@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://dem23o7vakemi"]
+
+[ext_resource type="Script" path="res://Scenes/Prefabs/item.gd" id="1_scr"]
+[ext_resource type="Texture2D" path="res://items/Bronze/Bronze_11.png" id="2_f0"]
+[ext_resource type="Texture2D" path="res://items/Bronze/Bronze_12.png" id="2_f1"]
+[ext_resource type="Texture2D" path="res://items/Bronze/Bronze_13.png" id="2_f2"]
+[ext_resource type="Texture2D" path="res://items/Bronze/Bronze_14.png" id="2_f3"]
+[ext_resource type="Texture2D" path="res://items/Bronze/Bronze_15.png" id="2_f4"]
+[ext_resource type="Texture2D" path="res://items/Bronze/Bronze_16.png" id="2_f5"]
+[ext_resource type="Texture2D" path="res://items/Bronze/Bronze_17.png" id="2_f6"]
+[ext_resource type="Texture2D" path="res://items/Bronze/Bronze_18.png" id="2_f7"]
+[ext_resource type="Texture2D" path="res://items/Bronze/Bronze_19.png" id="2_f8"]
+[ext_resource type="Texture2D" path="res://items/Bronze/Bronze_20.png" id="2_f9"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_spin"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_f0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_f1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_f2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_f3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_f4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_f5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_f6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_f7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_f8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_f9")
+}],
+"loop": true,
+"name": &"spin",
+"speed": 12.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_item"]
+radius = 26.0
+
+[node name="Item" type="Area2D"]
+collision_mask = 3
+script = ExtResource("1_scr")
+kind = 1
+
+[node name="Anim" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.09, 0.09)
+sprite_frames = SubResource("SpriteFrames_spin")
+animation = &"spin"
+autoplay = "spin"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_item")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

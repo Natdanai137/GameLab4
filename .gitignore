@@ -17,3 +17,11 @@ export_presets.cfg
 .mono/
 data_*/
 mono_crash.*.json
+# ---- Godot Web export build artifacts in project ROOT (regenerable, don't commit) ----
+# หมายเหตุ: build สำหรับ GitHub Pages อยู่ใน /web และต้นฉบับ /docs (สองอันนี้ commit ได้)
+/2DPlatformer*
+/*.pck
+/*.wasm
+
+# ไฟล์วิดีโอใหญ่ (ใหญ่เกินลิมิต GitHub - เก็บนอก git หรือ host ที่อื่น)
+*.mp4
