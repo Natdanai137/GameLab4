@@ -6,14 +6,14 @@ This starter kit provides all the essential mechanics needed to build a complete
 
 ## Preview
 
-<img src="GameLab4/t/demo1.PNG" style="width:300px;" />
-<img src="GameLab4/t/demo2.PNG" style="width:300px;" />
-<img src="GameLab4/t/demo3.PNG" style="width:300px;" />
-<img src="GameLab4/t/demo4.PNG" style="width:300px;" />
-<img src="GameLab4/t/demo5.PNG" style="width:300px;" />
+<img src="t/demo1.PNG" style="width:300px;" />
+<img src="t/demo2.PNG" style="width:300px;" />
+<img src="t/demo3.PNG" style="width:300px;" />
+<img src="t/demo4.PNG" style="width:300px;" />
+<img src="t/demo5.PNG" style="width:300px;" />
 
 
-[Game Preview](2DPlatformerStarter.html) 
+[Game Preview](web/2DPlatformerStarter.html) 
 
 
 ## Features
