@@ -12,7 +12,7 @@ This starter kit provides all the essential mechanics needed to build a complete
 <img src="t/demo4.PNG" width="300"  />
 <img src="t/demo5.PNG" width="300"  />
 
-[Game Preview](GameLab4/web/2DPlatformerStarter.html)
+[Game Preview](GameLab4/web/index.html)
 
 ## Features
 
