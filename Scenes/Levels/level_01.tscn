@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bjntpxb1c8jxn" path="res://Scenes/Levels/base_level.tscn" id="1_base"]
 [ext_resource type="TileSet" uid="uid://b8amnfmj5eexa" path="res://Scenes/Prefabs/terrain_tile_set.tres" id="2_ts"]
 [ext_resource type="PackedScene" uid="uid://cppg5yoxwv0dy" path="res://Scenes/Levels/level_02.tscn" id="3_next"]
+[ext_resource type="Texture2D" uid="uid://hn8peotcnlwb" path="res://b/content.png" id="5_ge2ro"]
 [ext_resource type="Texture2D" uid="uid://bygpcgi8vkc41" path="res://b/1 background/1.png" id="10_bg1"]
 [ext_resource type="Texture2D" uid="uid://buom2tky2bj7o" path="res://b/1 background/2.png" id="11_bg2"]
 [ext_resource type="PackedScene" uid="uid://ctrapshur0001" path="res://Scenes/Prefabs/trap_shuriken.tscn" id="12_trK"]
@@ -29,18 +30,23 @@ position = Vector2(576, 324)
 scale = Vector2(2, 2)
 texture = ExtResource("11_bg2")
 
-[node name="Ground" type="TileMapLayer" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="2" unique_id=1495017470]
+[node name="Content" type="Sprite2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="2" unique_id=1325219756]
+position = Vector2(829.25, 352.75)
+scale = Vector2(2.0749347, 0.87515223)
+texture = ExtResource("5_ge2ro")
+
+[node name="Ground" type="TileMapLayer" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="3" unique_id=1495017470]
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAAEAAkAAAAHAAAAAAAiAAoAAAAHAAEAAAAlAAYAAAAIAAAAAAAFAAoAAAAHAAEAAAAIAAkAAAAHAAAAAAATAAkAAAAHAAAAAAAeAAkAAAAHAAAAAAAHAAoAAAAHAAEAAAASAAoAAAAHAAEAAAAkAAkAAAAHAAAAAAAbAAYAAAAHAAAAAAAJAAoAAAAHAAEAAAANAAoAAAAHAAEAAAAYAAoAAAAHAAEAAAAjAAoAAAAHAAEAAAAmAAkAAAAHAAAAAAAQAAYAAAAHAAAAAAAdAAYAAAAIAAAAAAAnAAoAAAAHAAEAAAAlAAoAAAAHAAEAAAAAAAkAAAAGAAAAAAALAAkAAAAHAAAAAAApAAoAAAAHAAEAAAABAAoAAAAHAAEAAAAaAAkAAAAHAAAAAAAPAAkAAAAHAAAAAAAGAAYAAAAGAAAAAAADAAoAAAAHAAEAAAAOAAoAAAAHAAEAAAARAAkAAAAHAAAAAAAcAAkAAAAHAAAAAAAgAAkAAAAHAAAAAAArAAkAAAAIAAAAAAAQAAoAAAAHAAEAAAAUAAoAAAAIAAEAAAAfAAoAAAAHAAEAAAAiAAkAAAAHAAAAAAAkAAYAAAAHAAAAAAAFAAkAAAAHAAAAAAAhAAoAAAAHAAEAAAAHAAkAAAAHAAAAAAASAAkAAAAHAAAAAAAJAAkAAAAHAAAAAAAKAAoAAAAHAAEAAAANAAkAAAAHAAAAAAAYAAkAAAAHAAAAAAAjAAkAAAAHAAAAAAAPAAYAAAAHAAAAAAAaAAYAAAAGAAAAAAAnAAkAAAAHAAAAAAAMAAoAAAAHAAEAAAAXAAoAAAAGAAEAAAAlAAkAAAAHAAAAAAAbAAoAAAAHAAEAAAApAAkAAAAHAAAAAAAIAAYAAAAHAAAAAAABAAkAAAAHAAAAAAAZAAoAAAAHAAEAAAAdAAoAAAAHAAEAAAAoAAoAAAAHAAEAAAAiAAYAAAAGAAAAAAADAAkAAAAHAAAAAAAOAAkAAAAHAAAAAAAqAAoAAAAHAAEAAAACAAoAAAAHAAEAAAAQAAkAAAAHAAAAAAAGAAoAAAAHAAEAAAAUAAkAAAAIAAAAAAAfAAkAAAAHAAAAAAAEAAoAAAAHAAEAAAAIAAoAAAAHAAEAAAAhAAkAAAAHAAAAAAATAAoAAAAHAAEAAAAeAAoAAAAHAAEAAAAjAAYAAAAHAAAAAAAkAAoAAAAHAAEAAAARAAYAAAAIAAAAAAAcAAYAAAAHAAAAAAAKAAkAAAAHAAAAAAAmAAoAAAAHAAEAAAAMAAkAAAAHAAAAAAAXAAkAAAAGAAAAAAAOAAYAAAAGAAAAAAAbAAkAAAAHAAAAAAAAAAoAAAAGAAEAAAALAAoAAAAHAAEAAAAZAAkAAAAHAAAAAAAPAAoAAAAHAAEAAAAaAAoAAAAHAAEAAAAdAAkAAAAHAAAAAAAoAAkAAAAHAAAAAAAHAAYAAAAHAAAAAAARAAoAAAAHAAEAAAAcAAoAAAAHAAEAAAAqAAkAAAAHAAAAAAAJAAYAAAAIAAAAAAACAAkAAAAHAAAAAAAgAAoAAAAHAAEAAAArAAoAAAAIAAEAAAAGAAkAAAAHAAAAAAA=")
 tile_set = ExtResource("2_ts")
 
-[node name="Trap1" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="3" unique_id=1884080475 instance=ExtResource("13_trS")]
+[node name="Trap1" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="4" unique_id=1884080475 instance=ExtResource("13_trS")]
 position = Vector2(800, 536)
 
-[node name="Trap2" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="4" unique_id=1724219564 instance=ExtResource("12_trK")]
+[node name="Trap2" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="5" unique_id=1724219564 instance=ExtResource("12_trK")]
 position = Vector2(1376, 480)
 
-[node name="Trap3" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="5" unique_id=567683423 instance=ExtResource("14_trW")]
+[node name="Trap3" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="6" unique_id=567683423 instance=ExtResource("14_trW")]
 position = Vector2(1952, 192)
 
 [node name="Player" parent="." index="2" unique_id=850213228]

@@ -12,7 +12,23 @@ This starter kit provides all the essential mechanics needed to build a complete
 <img src="t/demo4.PNG" width="300"  />
 <img src="t/demo5.PNG" width="300"  />
 
-[Game Preview](GameLab4/web/index.html)
+[Play GameLab4](https://Natdanai137.github.io/GameLab4/)
+
+## Publish the web game
+
+The `web/` directory contains the exported playable game. The **Deploy web game**
+workflow publishes that directory to GitHub Pages when changes reach `main`.
+In **Settings → Pages → Build and deployment**, set **Source** to **GitHub Actions**.
+The site URL above then opens the game directly.
+
+After changing the game, export it again with Godot 4.7 and its matching export
+templates: **Project → Export → index (Web) → Export Project → web/index.html**.
+Commit the updated `web/` files along with the game changes before pushing.
+Thread support must remain disabled for ordinary GitHub Pages hosting.
+
+For local testing, serve the project over HTTP (for example,
+`python -m http.server 8000`) and open `http://localhost:8000/`.
+Opening the HTML directly as a `file://` URL does not run the game.
 
 ## Features
 
